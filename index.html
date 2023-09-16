@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crochet Idler</title>
+    <script type="module" crossorigin src="/assets/index-7fa01bf1.js"></script>
+    <link rel="stylesheet" href="/assets/index-bcdd0087.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <script>
+      // adding service worker for pwa
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker.register('serviceWorker.js')
+          .then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+    
+  </body>
+</html>
